@@ -1,6 +1,6 @@
 export default function (env: NodeJS.ProcessEnv) {
     return {
-      port: env.PORT,
+      port: env.PORT || 3000,
       jwtSecret: env.JWT_SECRET,
       jwtExpiry: env.JWT_EXPIRE_TIME || "7d",
       saltRounds: env.SALT_ROUND || 10,
