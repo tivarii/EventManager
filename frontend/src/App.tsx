@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 // // Importing all pages
 import SignupPage from './pages/SignupPage';
-// import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/LoginPage';
 import LandingPage2 from './pages/LandingPage2';
 // import AcademicInfoPage from './pages/AcademicInfoPage';
 // import Dashboard from './pages/Dashboard';
@@ -60,9 +60,9 @@ function App() {
               {/* Public Routes */}
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/" element={<LandingPage2 />} />
-              {/* <Route path="/login" element={<LoginPage />} />
-              <Route path="/verify/account" element={<VerifyAccountPage />} />
-              <Route path="/event/info" element={<EventDetailsPage />} /> */}
+              <Route path="/login" element={<LoginPage />} />
+              {/* <Route path="/verify/account" element={<VerifyAccountPage />} /> */}
+              {/* <Route path="/event/info" element={<EventDetailsPage />} /> */}
 
               {/* Protected Routes */}
               {/* <Route
