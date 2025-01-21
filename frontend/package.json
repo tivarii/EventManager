@@ -1,5 +1,5 @@
 {
-  "name": "eventsproclient",
+  "name": "eventsManagerclient",
   "private": true,
   "version": "0.0.0",
   "type": "module",

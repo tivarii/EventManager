@@ -5,12 +5,12 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 // import UnauthorizedPage from '../src/pages/UnauthorizedPage';
 
 // // Importing all pages
-// import SignupPage from './pages/SignupPage';
+import SignupPage from './pages/SignupPage';
 // import LoginPage from './pages/LoginPage';
 import LandingPage2 from './pages/LandingPage2';
 // import AcademicInfoPage from './pages/AcademicInfoPage';
 // import Dashboard from './pages/Dashboard';
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 // import VerifyAccountPage from './pages/VerifyAccountPage';
 // import TestPage from './pages/TestPage';
 // import CommitteePage from "./pages/CommitteePage";
@@ -55,10 +55,10 @@ function App() {
         {/* Main Content */}
         <div className="relative z-10">
           <Router>
-            {/* <Navbar /> */}
+            <Navbar />
             <Routes>
               {/* Public Routes */}
-              {/* <Route path="/signup" element={<SignupPage />} /> */}
+              <Route path="/signup" element={<SignupPage />} />
               <Route path="/" element={<LandingPage2 />} />
               {/* <Route path="/login" element={<LoginPage />} />
               <Route path="/verify/account" element={<VerifyAccountPage />} />

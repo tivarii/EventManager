@@ -3,7 +3,6 @@ import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-
 import HeroSection from "../components/landingPage/HeroSection.tsx";
 import FeaturesSection from "../components/landingPage/FeaturesSection.tsx";
 import WavySection from "../components/landingPage/WavyBackground";
-import { TimelineDemo } from "../components/landingPage/Timeline.tsx";
 import { AnimatedTestimonialsDemo } from "../components/landingPage/Testimonials.tsx";
 import Footer from "../components/Helpers/Footer.tsx";
 

@@ -16,16 +16,7 @@ const Footer = () => {
           <IconBrandInstagram className="h-3/4 w-3/4 text-white" />
         </div>
       ),
-      href: "https://www.instagram.com/anujgill_50/", // Replace with actual link
-    },
-    {
-      title: "X (Twitter)",
-      icon: (
-        <div className="w-full h-full bg-black rounded-lg flex items-center justify-center">
-          <IconBrandX className="h-3/4 w-3/4 text-white" />
-        </div>
-      ),
-      href: "https://x.com/anujgill_01", // Replace with actual link
+      href: "https://www.instagram.com/adarsh.tivarii/", // Replace with actual link
     },
     {
       title: "LinkedIn",
@@ -34,7 +25,7 @@ const Footer = () => {
           <IconBrandLinkedin className="h-3/4 w-3/4 text-white" />
         </div>
       ),
-      href: "https://www.linkedin.com/in/anuj-gill-web-dev/", // Replace with actual link
+      href: "https://www.linkedin.com/in/adarsh-tivarii/", // Replace with actual link
     },
     {
       title: "GitHub",
@@ -43,7 +34,7 @@ const Footer = () => {
           <IconBrandGithub className="h-3/4 w-3/4 text-white" />
         </div>
       ),
-      href: "https://github.com/Anuj-Gill", // Replace with actual link
+      href: "https://github.com/tivarii", // Replace with actual link
     }
   ];
 
