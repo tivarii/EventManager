@@ -11,13 +11,13 @@ import LandingPage2 from './pages/LandingPage2';
 // import AcademicInfoPage from './pages/AcademicInfoPage';
 // import Dashboard from './pages/Dashboard';
 import Navbar from "./components/Navbar";
-// import VerifyAccountPage from './pages/VerifyAccountPage';
+import VerifyAccountPage from './pages/VerifyAccountPage';
 // import TestPage from './pages/TestPage';
 // import CommitteePage from "./pages/CommitteePage";
 // import CommitteeDashboard from "./pages/CommitteeDashboard";
 // import CreateEvent from "./pages/CreateEvent";
 // import EventsPage from "./pages/EventsPage";
-// import EventDetailsPage from "./pages/EventDetaisPage";
+import EventDetailsPage from "./pages/EventDetailsPage";
 // import Attendance from './pages/Attendance';
 // import CommitteeProfile from './pages/CommitteeProfile';
 // import CommitteePubs from './pages/CommitteePubs';
@@ -61,8 +61,8 @@ function App() {
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/" element={<LandingPage2 />} />
               <Route path="/login" element={<LoginPage />} />
-              {/* <Route path="/verify/account" element={<VerifyAccountPage />} /> */}
-              {/* <Route path="/event/info" element={<EventDetailsPage />} /> */}
+              <Route path="/verify/account" element={<VerifyAccountPage />} />
+              <Route path="/event/info" element={<EventDetailsPage />} />
 
               {/* Protected Routes */}
               {/* <Route
