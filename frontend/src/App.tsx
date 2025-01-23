@@ -1,24 +1,24 @@
 import React from 'react';
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-// import { loggedinStatusState } from './store/atoms/LoginStatus';
-// import UnauthorizedPage from '../src/pages/UnauthorizedPage';
+import { loggedinStatusState } from './store/atoms/LoginStatus';
+import UnauthorizedPage from '../src/pages/UnauthorizedPage';
 
 // // Importing all pages
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import LandingPage2 from './pages/LandingPage2';
-// import AcademicInfoPage from './pages/AcademicInfoPage';
-// import Dashboard from './pages/Dashboard';
+import AcademicInfoPage from './pages/AcademicInfoPage';
+import Dashboard from './pages/Dashboard';
 import Navbar from "./components/Navbar";
 import VerifyAccountPage from './pages/VerifyAccountPage';
-// import TestPage from './pages/TestPage';
-// import CommitteePage from "./pages/CommitteePage";
-// import CommitteeDashboard from "./pages/CommitteeDashboard";
-// import CreateEvent from "./pages/CreateEvent";
-// import EventsPage from "./pages/EventsPage";
+import TestPage from './pages/TestPage';
+import CommitteePage from "./pages/CommitteePage";
+import CommitteeDashboard from "./pages/CommitteeDashboard";
+import CreateEvent from "./pages/CreateEvent";
+import EventsPage from "./pages/EventsPage";
 import EventDetailsPage from "./pages/EventDetailsPage";
-// import Attendance from './pages/Attendance';
+import Attendance from './pages/Attendance';
 // import CommitteeProfile from './pages/CommitteeProfile';
 // import CommitteePubs from './pages/CommitteePubs';
 // import CommitteeMembers from './pages/CommitteeMembers';
@@ -31,16 +31,16 @@ import EventDetailsPage from "./pages/EventDetailsPage";
 // import { RegistrationSuccessPage } from './pages/RegistrationSuccessPage';
 
 // ProtectedRoute component
-// const ProtectedRoute = ({ children }) => {
-//   const loggedIn = useRecoilValue(loggedinStatusState);
-//   const token = localStorage.getItem('token');
+const ProtectedRoute = ({ children }) => {
+  const loggedIn = useRecoilValue(loggedinStatusState);
+  const token = localStorage.getItem('token');
 
-//   if (!loggedIn || !token) {
-//     return <UnauthorizedPage />;
-//   }
+  if (!loggedIn || !token) {
+    return <UnauthorizedPage />;
+  }
 
-//   return children;
-// };
+  return children;
+};
 
 function App() {
   return (
@@ -65,7 +65,7 @@ function App() {
               <Route path="/event/info" element={<EventDetailsPage />} />
 
               {/* Protected Routes */}
-              {/* <Route
+              <Route
                 path="/dashboard"
                 element={
                   <ProtectedRoute>
@@ -113,7 +113,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route
+              {/* <Route
                 path="/committee/profile"
                 element={
                   <ProtectedRoute>
@@ -208,8 +208,8 @@ function App() {
                   <ProtectedRoute>
                     <UserStats />
                   </ProtectedRoute>
-                } */}
-              {/* /> */}
+                }
+              /> */}
 
               {/* Optional: Catch-all route for undefined paths */}
               <Route path="*" element={<Navigate to="/" replace />} />
