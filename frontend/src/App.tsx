@@ -19,16 +19,16 @@ import CreateEvent from "./pages/CreateEvent";
 import EventsPage from "./pages/EventsPage";
 import EventDetailsPage from "./pages/EventDetailsPage";
 import Attendance from './pages/Attendance';
-// import CommitteeProfile from './pages/CommitteeProfile';
-// import CommitteePubs from './pages/CommitteePubs';
-// import CommitteeMembers from './pages/CommitteeMembers';
-// import CommitteeEvents from './pages/CommitteeEvents';
-// import UpdateEvent from './pages/UpdateEvents';
-// import EventStats from './pages/EventStats';
-// import UserProfile from './pages/UserProfile';
-// import SocialHandles from './pages/SocialHandles';
-// import UserStats from './pages/UserStats';
-// import { RegistrationSuccessPage } from './pages/RegistrationSuccessPage';
+import CommitteeProfile from './pages/CommitteeProfile';
+import CommitteePubs from './pages/CommitteePubs';
+import CommitteeMembers from './pages/CommitteeMembers';
+import CommitteeEvents from './pages/CommitteeEvents';
+import UpdateEvent from './pages/UpdateEvents';
+import EventStats from './pages/EventStats';
+import UserProfile from './pages/UserProfile';
+import SocialHandles from './pages/SocialHandles';
+import UserStats from './pages/UserStats';
+import { RegistrationSuccessPage } from './pages/RegistrationSuccessPage';
 
 // ProtectedRoute component
 const ProtectedRoute = ({ children }) => {
@@ -113,7 +113,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              {/* <Route
+              <Route
                 path="/committee/profile"
                 element={
                   <ProtectedRoute>
@@ -209,7 +209,7 @@ function App() {
                     <UserStats />
                   </ProtectedRoute>
                 }
-              /> */}
+              />
 
               {/* Optional: Catch-all route for undefined paths */}
               <Route path="*" element={<Navigate to="/" replace />} />
