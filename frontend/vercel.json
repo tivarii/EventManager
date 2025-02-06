@@ -1,19 +1,8 @@
 {
-    "version" : 2,
-    "builds" : [
+    "rewrites":[
         {
-            "src":"src/main.tsx",
-            "use":"@vercel/node"
-        }
-    ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"src/main.tsx",
-            "methods":["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
-            "headers":{
-                "Access-Control-Allow-Origin":"*"
-            }
+            "source":"/src/.",
+            "destination":"/"
         }
     ]
 }
