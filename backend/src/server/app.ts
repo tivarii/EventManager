@@ -22,24 +22,26 @@ export default function ExpressApp(): Application {
     "https://event-manager-front-git-bca4a6-adarsh-tiwaris-projects-00965c6b.vercel.app"
   ];
 
-  app.use(
-    cors({
-      origin: (origin, callback) => {
-        // Allow requests with no origin (like mobile apps, Postman, etc.)
-        if (!origin) return callback(null, true);
+  // app.use(
+  //   cors({
+  //     origin: (origin, callback) => {
+  //       // Allow requests with no origin (like mobile apps, Postman, etc.)
+  //       if (!origin) return callback(null, true);
 
-        if (allowedOrigins.includes(origin)) {
-          // If the origin is in the allowedOrigins list, allow it
-          callback(null, true);
-        } else {
-          // If the origin is not in the allowedOrigins list, reject it
-          console.log(origin);
-          callback(new Error("Not allowed by CORS"));
-        }
-      },
-      credentials: true, // Allow credentials
-    }),
-  );
+  //       if (allowedOrigins.includes(origin)) {
+  //         // If the origin is in the allowedOrigins list, allow it
+  //         callback(null, true);
+  //       } else {
+  //         // If the origin is not in the allowedOrigins list, reject it
+  //         console.log(origin);
+  //         callback(new Error("Not allowed by CORS"));
+  //       }
+  //     },
+  //     credentials: true, // Allow credentials
+  //   }),
+  // );
+
+  app.use(cors());
   app.use(express.json({ limit: "3mb" }));
 
   app.use("/auth", authRoutes);
