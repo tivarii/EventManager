@@ -15,6 +15,9 @@ export default function ExpressApp(): Application {
     "http://localhost:5173", // Local development
     // have to add  // Production
     "http://localhost:3000", // Another allowed origin
+    "https://event-manager-frontend-three.vercel.app/",
+
+    "https://eventmanager-omega.vercel.app/"
   ];
 
   app.use(
