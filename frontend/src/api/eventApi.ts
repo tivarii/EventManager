@@ -17,6 +17,7 @@ interface EventDetails {
 
 export const createEvent = async (eventDetails: EventDetails) => {
   try {
+    console.log(eventDetails);
     const response = await axiosInstance.post("/event/create", { eventDetails });
     return response
   } catch (error) {

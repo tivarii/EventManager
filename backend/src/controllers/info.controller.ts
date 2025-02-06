@@ -6,7 +6,7 @@ import {
   updateUserDataService,
   addFeedbackService,
   getFeedbacksService,
-  getUserStatsService
+  getUserStatsService,
 } from "../services/userService";
 import { AcademicInfoRequestBody } from "../interfaces/authInterfaces";
 
@@ -141,7 +141,7 @@ export async function getUserStats(
     const userStats = await getUserStatsService(Number(user.id));
     const totalEvents = await prisma.event.count();
 
-    res.status(200).json({ message: "User stats", userStats, totalEvents })
+    res.status(200).json({ message: "User stats", userStats, totalEvents });
   } catch (error) {
     next(error);
   }

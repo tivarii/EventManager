@@ -32,7 +32,7 @@ export default function ExpressApp(): Application {
         }
       },
       credentials: true, // Allow credentials
-    })
+    }),
   );
   app.use(express.json({ limit: "3mb" }));
 

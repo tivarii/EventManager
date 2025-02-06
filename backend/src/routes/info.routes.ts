@@ -5,7 +5,7 @@ import {
   updateUserData,
   addFeedback,
   getFeedbacks,
-  getUserStats
+  getUserStats,
 } from "../controllers/info.controller";
 import { jwtCheck } from "../middlewares/jwtCheck";
 

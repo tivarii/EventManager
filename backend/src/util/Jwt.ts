@@ -21,7 +21,6 @@ export function createJwt(data: JwtData): string | undefined {
   }
 }
 
-
 //for verify token
 export async function verifyJwt(
   token: string,

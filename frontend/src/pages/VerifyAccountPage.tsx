@@ -14,7 +14,7 @@ const VerifyAccountPage: React.FC = () => {
     const verifyAccount = async () => {
       const params = new URLSearchParams(location.search);
       const token = params.get("token");
-
+      console.log("token is :" + token);
       if (!token) {
         await new Promise(resolve => setTimeout(resolve, 4000));
         setStatus("Verification token is missing.");

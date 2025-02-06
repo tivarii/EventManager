@@ -31,14 +31,24 @@ export async function roleCheckAdmin(
   next: NextFunction,
 ) {
   const { jwtPayload } = req.body;
-  const role = decrypt(jwtPayload.roleCode);
-  if (!role.includes("Head")) {
-    res.status(403).json({ message: "Access denied!" });
-    return;
-  }
-  req.body.role = role;
+  console.log("roleCode is " + jwtPayload.roleCode);
+  try {
+    const role = decrypt(jwtPayload.roleCode);
 
-  next();
+    if (!role.includes("Head")) {
+      res.status(403).json({ message: "Access denied!" });
+      return;
+    }
+    req.body.role = role;
+
+    next();
+  }catch(e){
+    res.status(502).json({
+      e,
+      msg:"internal error"
+    })
+  }
+  
 }
 
 // to check if the user is a committee member

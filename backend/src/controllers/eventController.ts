@@ -143,9 +143,7 @@ export async function register(
       qrToken,
     );
 
-
     if (newRegister) {
-
       const mail = await sendEmail(
         jwtPayload.email,
         newRegister.user,
@@ -273,13 +271,11 @@ export async function eventDetails(
     if (details) {
       const cId = details.committee?.id;
       const pubs = await getPubsInfo(Number(cId));
-      res
-        .status(200)
-        .json({
-          message: "Event details fetched",
-          eventDetails: details,
-          pubs,
-        });
+      res.status(200).json({
+        message: "Event details fetched",
+        eventDetails: details,
+        pubs,
+      });
       return;
     }
     res.status(404).json({ message: "Event not found" });

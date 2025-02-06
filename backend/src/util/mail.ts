@@ -15,6 +15,7 @@ export const sendEmail = async (
       pass: process.env.APP_PASSWORD,
     },
   });
+  console.log(process.env);
   const baseUrl = process.env.FRONTEND_URL; // Define your base URL in .env
   const detailsUrl = `${baseUrl}/event/info?eventName=${eventDetails.eventName}`;
 
@@ -25,7 +26,7 @@ export const sendEmail = async (
 
   try {
     const info = await transporter.sendMail({
-      from: '"EventsPRO" <anujgill212@gmail.com>',
+      from: '"EventsM" <adt.pt2002@gmail.com>',
       to: receiverEmail,
       subject: "Event Registration Confirmation ✔",
       html: `
@@ -153,8 +154,8 @@ export const sendEmail = async (
 
         <!-- Footer -->
         <div class="footer">
-            <p>Need help? Contact us at <a href="mailto:eventspro03@gmail.com" style="color: #cccccc;">eventspro03@gmail.com</a></p>
-            <p>© 2024 EventsPRO. All rights reserved.</p>
+            <p>Need help? Contact us at <a href="mailto:adt.pt2002@gmail.com" style="color: #cccccc;">adt.pt2002@gmail.com</a></p>
+            <p>© 2024 EventsM. All rights reserved.</p>
         </div>
     </div>
 </body>
@@ -187,14 +188,14 @@ export const sendVerificationEmail = async (
     port: 587,
     secure: false,
     auth: {
-      user: "anujgill212@gmail.com",
+      user: "adt.pt2002@gmail.com",
       pass: process.env.APP_PASSWORD,
     },
   });
 
   try {
     const info = await transporter.sendMail({
-      from: '"EventsPRO" <anujgill212@gmail.com>',
+      from: '"EventsM" <adt.pt2002@gmail.com>',
       to: receiverEmail,
       subject: "Account Verification Email",
       html: `
@@ -269,8 +270,8 @@ export const sendVerificationEmail = async (
             </div>
             <div class="footer">
 
-            <p>Need help? Contact us at <a href="mailto:eventspro03@gmail.com" style="color: #cccccc;">eventspro03@gmail.com</a></p>
-            <p>© 2024 EventsPRO. All rights reserved.</p>
+            <p>Need help? Contact us at <a href="mailto:adt.pt2002@gmail.com" style="color: #cccccc;">adt.pt2002@gmail.com</a></p>
+            <p>© 2024 EventsM. All rights reserved.</p>
             </div>
           </div>
         </body>

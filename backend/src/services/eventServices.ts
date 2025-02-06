@@ -127,7 +127,6 @@ export async function registerForEvent(
     return false;
   }
 
-
   // If teamCode is provided, validate it
   if (details.teamCode) {
     const newParticipant = await prisma.participant.create({
@@ -143,7 +142,6 @@ export async function registerForEvent(
         user: true,
       },
     });
-
 
     return newParticipant;
   } else {
@@ -232,7 +230,6 @@ export async function getCommitteeEvents(committeeName: string) {
   });
 
   const cId = committee?.id;
-
 
   if (cId) {
     return await prisma.event.findMany({
