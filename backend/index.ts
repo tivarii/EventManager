@@ -3,6 +3,6 @@ import { miscConfig } from "./src/config";
 
 export const app = ExpressApp();
 
-// app.listen(miscConfig.port, async () => {
-//   console.log(`server started at ${miscConfig.port}`);
-// });
+app.listen(miscConfig.port, async () => {
+  console.log(`server started at ${miscConfig.port}`);
+});
