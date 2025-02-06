@@ -11,16 +11,16 @@ import { error } from "console";
 
 export default function ExpressApp(): Application {
   const app: Application = express();
-  const allowedOrigins = [
-    "http://localhost:5173", // Local development
-    // have to add  // Production
-    "http://localhost:3000", 
-    // // Another allowed origin
-    "https://event-manager-frontend-three.vercel.app",
+  // const allowedOrigins = [
+  //   "http://localhost:5173", // Local development
+  //   // have to add  // Production
+  //   "http://localhost:3000", 
+  //   // // Another allowed origin
+  //   "https://event-manager-frontend-three.vercel.app",
 
-    "https://eventmanager-omega.vercel.app",
-    "https://event-manager-front-git-bca4a6-adarsh-tiwaris-projects-00965c6b.vercel.app"
-  ];
+  //   "https://eventmanager-omega.vercel.app",
+  //   "https://event-manager-front-git-bca4a6-adarsh-tiwaris-projects-00965c6b.vercel.app"
+  // ];
 
   // app.use(
   //   cors({
