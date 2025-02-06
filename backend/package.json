@@ -7,8 +7,7 @@
     "format": "npx prettier . --write",
     "lint:fix": "eslint . --fixx",
     "prepare": "husky",
-    "dev": "ts-node index.ts --watch",
-    "build":"tsc"
+    "dev": "ts-node index.ts --watch"
   },
   "keywords": [],
   "author": "",
