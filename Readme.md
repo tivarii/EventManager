@@ -3,6 +3,8 @@
 
 EventsM is an innovative platform designed to simplify the management of events. Built with a modern tech stack, it enables users to easily publicize events, handle registrations, manage attendance, and more.
 
+https://drive.google.com/file/d/17ItsDQQIWVssCG95sKXXzwI0Pp4gRPSr/view?usp=sharing
+
 ## Key Features
 
 1. 🎉 **Easy Publicity**: Share your event with just one link.
