@@ -9,7 +9,7 @@ const WavySection = () => {
           Managing Events Just Got Easier
         </p>
         <p className="text-base md:text-lg mt-4 text-white font-normal text-center">
-          Simplify your workflow with EventsPro. From creation to analytics, everything in one place.
+          Simplify your workflow with EventsM. From creation to analytics, everything in one place.
         </p>
       </WavyBackground>
     </div>
