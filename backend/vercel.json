@@ -1,21 +1,20 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "./src/index.ts",
-      "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/**"] }
-    }
+      {
+          "src": "src/index.ts",
+          "use": "@vercel/node",
+          "config": { "includeFiles": ["dist/**"] }
+      }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/index.ts",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      }
+      {
+          "src": "/(.*)",
+          "dest": "src/index.ts",
+          "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
     }
-  ],
-  "buildCommand": "npx prisma generate && tsc"
+      }
+  ]
 }
